@@ -86,7 +86,7 @@ def pray():
 
 def shadowman():
     print "You imagine his white facial hair rubbing against your soft cheeks."
-    print "You hear his voice, \"Your services to the overlords is appreciated.
+    print "You hear his voice, \"Your services to the overlords is appreciated."
     print "Our complete assimilation of this dimension... will now... proceed.\""
 
 def cthulhu():
