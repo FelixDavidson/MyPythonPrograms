@@ -20,7 +20,7 @@ Do you accept or refuse?
     begin = raw_input("> ")
 
     if begin in {"accept", "y", "yes", "Yes"}:
-
+        paths()
 
     elif begin in {"refuse", "No", "no", "n"}:
         print "You respond, \"Forgive me brother for I am not up to such a task\""
@@ -32,9 +32,7 @@ Do you accept or refuse?
         if again in {"Yes", "yes", "y"}:
             intro()
         elif again in {"No", "no", "n"}:
-            exit(0)
-        else:
-            exit(0)
+            end("Why did you start playing this anyway?")
 
     else:
         print "You spelled something wrong try again"
@@ -51,5 +49,58 @@ disgusting because it is crawling with mororgs. These creatures are known for ru
 furiously against people walking by and grunting \"Errrrrro, Errrrrro, Errrrrro\"
 Which path do you take?
 """
+
+def paths():
+    print """You start down the path. Not before long you are struggling to walk through all the
+white. Soon your vision begins to fade. Your arms feel heavy. You begin to lose consiousness
+Do you give up or pray?"""
+
+    white = raw_input("> ")
+
+    if white == "give up":
+        end("You stop struggling and let the sluge consume you.")
+
+    elif white == "pray":
+        pray()
+
+def pray():
+    print "You clasp your hands in prayer. You pray to a God."
+    print "Which one do you pray to?"
+    print "Shadowman\nCthulhu\nJesus Christ\nAllah\nGreek Gods\nSatan"
+
+    god = raw_input("> ")
+
+    if god in {"Shadowman", "shadowman"}:
+        shadowman()
+    elif god in {"Cthulhu", "cthulhu"}:
+        cthulhu()
+    elif god in {"Allah", "allah"}:
+        allah()
+    elif god in {"Greek", "Greek Gods", "greek Gods", "Greek gods"}:
+        greek()
+    elif god in {"Satan", "satan"}:
+        satan()
+    else:
+        print "I'm afraid I don't know that god, try again."
+        pray()
+
+def shadowman():
+    print "shadowman"
+
+def cthulhu():
+    print "cthulhu"
+
+def allah():
+    print "allah"
+
+def greek():
+    print "allah"
+
+def satan():
+    print "satan"
+
+def end(reason):
+    print reason, "Nice try."
+    exit(0)
 
 intro()
