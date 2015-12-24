@@ -1,5 +1,7 @@
 from sys import exit
 
+x = "> "
+
 def intro():
     print """
 Welcome young traveler.
@@ -17,7 +19,7 @@ not returned. I pray you, please search for them and you will be rewared greatly
 Do you accept or refuse?
 """
 
-    begin = raw_input("> ")
+    begin = raw_input(x)
 
     if begin in {"accept", "y", "yes", "Yes"}:
         paths()
@@ -27,7 +29,7 @@ Do you accept or refuse?
         print "He says, \"Understandable. Farwell and thank you for listening to my tale.\""
         print "Again?"
 
-        again = raw_input("> ")
+        again = raw_input(x)
 
         if again in {"Yes", "yes", "y"}:
             intro()
@@ -55,7 +57,7 @@ def paths():
 white. Soon your vision begins to fade. Your arms feel heavy. You begin to lose consiousness
 Do you give up or pray?"""
 
-    white = raw_input("> ")
+    white = raw_input(x)
 
     if white == "give up":
         end("You stop struggling and let the sluge consume you.")
@@ -68,7 +70,7 @@ def pray():
     print "Which one do you pray to?"
     print "Shadowman\nCthulhu\nJesus Christ\nAllah\nGreek Gods\nSatan"
 
-    god = raw_input("> ")
+    god = raw_input(x)
 
     if god in {"Shadowman", "shadowman"}:
         shadowman()
