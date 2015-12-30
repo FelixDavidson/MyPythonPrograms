@@ -45,6 +45,10 @@ def percents(x, y, z):
     answer = percent / y
     print answer
 
+def fire(p, s, pol, g, total):
+    f = total - (p + s + pol + g)
+    print f
+
 mutiplication(-5, 3, 2)
 problem(-6, -3, 2)
 iamsolazy(82, 15, 35)
@@ -54,3 +58,5 @@ whysomany(12, 2, 2, 3, 5)
 percents(18, 72, 100)
 percents(12, 60, 100)
 mutiplication(0.3, 5000000)
+fire(10, 44, 30, 4, 100)
+divide(-24.0, 18)
