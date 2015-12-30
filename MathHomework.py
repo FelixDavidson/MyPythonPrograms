@@ -23,7 +23,8 @@ def iamsolazy(x, y, z):
     print lazy
 
 
-def average(x, y, z, a): # aka the most retarded problem. My dumbass could realizes that I should floating points when using averages. Fixed it by getting rid of the problem
+def average(x, y, z, a):
+    # aka the most retarded problem. My dumbass could realizes that I should floating points when using averages. Fixed it by getting rid of the problem
     oldav = (x + y + z) / 3
     tom = (x + y + z)
     neednum = (a * 4) - tom
