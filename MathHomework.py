@@ -1,4 +1,5 @@
-# This is my math homework. Some (a lot) of it I left out. Just thought it be good to use it to learn more programming
+# This is my math homework. Some (a lot) of it I left out. Just thought it be
+# good to use it to learn more programming
 def addition(x, y):
     """Takes two arguments and adds them"""
     added = x + y
@@ -9,7 +10,9 @@ def subraction(x, y):
     sub = x - y
     print sub
 
-def mutiplication(x, y, z = 1): # z is defaulted to 1 so you are able to do mutiplication with both 2 and 3 numbers
+def mutiplication(x, y, z = 1):
+# z is defaulted to 1 so you are able to do
+# mutiplication with both 2 and 3 numbers
     """Takes two required arguments and one optional argument and multiplies them"""
     mult = x * y * z
     print mult
