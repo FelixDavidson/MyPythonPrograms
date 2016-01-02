@@ -28,8 +28,9 @@ Do you accept or refuse?
         paths()
 
     elif begin in {"refuse", "No", "no", "n"}:
-        print "You respond, \"Forgive me brother for I am not up to such a task\""
-        print "He says, \"Understandable. Farwell and thank you for listening to my tale.\""
+        print "You say, \"Forgive me brother for I am not up to such a task\""
+        print """He responds, \"Understandable. Farwell and thank you for
+listening to my tale.\""""
         print "Again?"
 
         again = raw_input(x)
@@ -97,8 +98,8 @@ def pray():
 
 def shadowman():
     print "You imagine his white facial hair rubbing against your soft cheeks."
-    print "You hear his voice, \"Your services to the overlords is appreciated."
-    print "Our complete assimilation of this dimension... will now... proceed.\""
+    print "You hear his voice, \"Your services to the overlords is appreciated"
+    print "Our complete assimilation of this dimension will now proceed\""
 
 
 def cthulhu():
