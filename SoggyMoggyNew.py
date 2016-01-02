@@ -2,20 +2,23 @@ from sys import exit
 
 x = "> "
 
+
 def intro():
     print """
 Welcome young traveler.
 I will be your narrator for the duration of this game.
 
 You find yourself in a tavern surrounded by warriors and merchants alike.
-A dark figure approaches you. He is wearing a dark robe with a red rope tied around his waist.
+A dark figure approaches you. He is wearing a dark robe with a red rope tied
+around his waist.
 
 He begins to speak.
 
-He says, \"A few men from my brotherhood have gone missing on a hike to Mount Mendakai.
-They were suppoed to return two weeks ago. When they did not return we asked
-a group of brothers to go looking for them. They left a week ago and still have
-not returned. I pray you, please search for them and you will be rewared greatly.\"
+He says, \"A few men from my brotherhood have gone missing on a hike to Mount
+Mendakai. They were suppoed to return two weeks ago. When they did not return
+we asked a group of brothers to go looking for them. They left a week ago and
+still have not returned. I pray you, please search for them and you will be
+rewared greatly.\"
 Do you accept or refuse?
 """
 
@@ -40,21 +43,25 @@ Do you accept or refuse?
         print "You spelled something wrong try again"
         intro()
 
+
 def paths():
     print """
 He thanks you graciously giving you a map and a staff."
 He says, \"May God bless you, I pray for your swift return\"
 
 You start on your adventure. As you walk up to a large fork in the road
-You see two paths. One is covered in a white sticky substance. The other, is just as
-disgusting because it is crawling with mororgs. These creatures are known for rubbing themselves
-furiously against people walking by and grunting \"Errrrrro, Errrrrro, Errrrrro\"
+You see two paths. One is covered in a white sticky substance. The other, is
+just as disgusting because it is crawling with mororgs. These creatures are
+known for rubbing themselves furiously against people walking by and grunting
+\"Errrrrro, Errrrrro, Errrrrro\"
 Which path do you take?
 """
 
-def paths():
-    print """You start down the path. Not before long you are struggling to walk through all the
-white. Soon your vision begins to fade. Your arms feel heavy. You begin to lose consiousness
+
+def path1():
+    print """You start down the path. Not before long you are struggling to
+walk through all the white. Soon your vision begins to fade. Your arms feel
+heavy. You begin to lose consiousness
 Do you give up or pray?"""
 
     white = raw_input(x)
@@ -64,6 +71,7 @@ Do you give up or pray?"""
 
     elif white == "pray":
         pray()
+
 
 def pray():
     print "You clasp your hands in prayer. You pray to a God."
@@ -86,22 +94,28 @@ def pray():
         print "I'm afraid I don't know that god, try again."
         pray()
 
+
 def shadowman():
     print "You imagine his white facial hair rubbing against your soft cheeks."
     print "You hear his voice, \"Your services to the overlords is appreciated."
     print "Our complete assimilation of this dimension... will now... proceed.\""
 
+
 def cthulhu():
     print "cthulhu"
+
 
 def allah():
     print "allah"
 
+
 def greek():
-    print "allah"
+    print "Greek"
+
 
 def satan():
     print "satan"
+
 
 def end(reason):
     print reason, "Nice try."
