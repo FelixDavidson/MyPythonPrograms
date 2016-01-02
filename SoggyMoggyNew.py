@@ -29,8 +29,7 @@ Do you accept or refuse?
 
     elif begin in {"refuse", "No", "no", "n"}:
         print "You say, \"Forgive me brother for I am not up to such a task\""
-        print """He responds, \"Understandable. Farwell and thank you for
-listening to my tale.\""""
+        print """He responds, \"Understandable. Farwell and thank you for listening to my tale.\""""
         print "Again?"
 
         again = raw_input(x)
@@ -41,7 +40,7 @@ listening to my tale.\""""
             end("Why did you start playing this anyway?")
 
     else:
-        print "You spelled something wrong try again"
+        print "You spelled something wrong. Try again."
         intro()
 
 
@@ -57,12 +56,20 @@ known for rubbing themselves furiously against people walking by and grunting
 \"Errrrrro, Errrrrro, Errrrrro\"
 Which path do you take?
 """
+    path = raw_input(x)
+
+    if path in {"one", "One", "1"}:
+        path1()
+    elif path in {"two", "Two", "2"}:
+        path2()
+    else:
+        print "You typed something wrong. Try again."
 
 
 def path1():
     print """You start down the path. Not before long you are struggling to
 walk through all the white. Soon your vision begins to fade. Your arms feel
-heavy. You begin to lose consiousness
+heavy. You begin to lose consiousness.
 Do you give up or pray?"""
 
     white = raw_input(x)
@@ -97,7 +104,7 @@ def pray():
 
 
 def shadowman():
-    print "You imagine his white facial hair rubbing against your soft cheeks."
+    print "You imagine his white facial hair rubbing against your soft cheeks"
     print "You hear his voice, \"Your services to the overlords is appreciated"
     print "Our complete assimilation of this dimension will now proceed\""
 
@@ -122,4 +129,7 @@ def end(reason):
     print reason, "Nice try."
     exit(0)
 
+
+def path2():
+    print ""
 intro()
