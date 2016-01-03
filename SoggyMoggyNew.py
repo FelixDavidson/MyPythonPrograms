@@ -64,6 +64,7 @@ Which path do you take?
         path2()
     else:
         print "You typed something wrong. Try again."
+        paths()
 
 
 def path1():
