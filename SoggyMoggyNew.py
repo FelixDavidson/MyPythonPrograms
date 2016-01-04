@@ -105,9 +105,44 @@ def pray():
 
 
 def shadowman():
-    print "You imagine his white facial hair rubbing against your soft cheeks"
-    print "You hear his voice, \"Your services to the overlords is appreciated"
+    print "You imagine his white facial hair rubbing against your soft cheeks."
+    print "You hear his voice, \"Your services to the overlords is appreciated."
     print "Our complete assimilation of this dimension will now proceed\""
+    print "You begin to rapidly speed up. All of the molecules in you body warm."
+    print "The world begins to turn into a blur. Your see the world age. The civilizations that pass."
+    print "You see the beauty. Your schell of emotion begins to shatter."
+    print "Something inside you beings to try to tear itself out."
+    print "You feel everything. He is no longer needed. You feel the soul that resides in you."
+    print "Your mortal body begins to fade. Your scalp begins to crack. The rest of your body follows."
+    print "Out of you skin springs a new you."
+    print "\"He needs to die,\" a voice in you mind says."
+    print "Monster, what do you do?"
+    print "Destroy him\nPeace is love"
+    Mawg = raw_input(x)
+
+    if Mawg in {"Destroy", "Destroy him", "destroy", "destroy him"}:
+        chaos()
+    elif Mawg in {"Peace", "peace", "Peace Is Love", "peace Is Love", "peace is Love", "Peace is love", "Peace is Love", "peace is love"}:
+        peace()
+
+
+def chaos():
+    print "You decide to spare no one. With your tentacles you smash against the ground."
+    print "You elevate into the air. Your body begins to shine."
+    print "You scream your name \"MOGGY MOG!\" as you say this, your body becomes one with everything. "
+    print "You end it all..."
+    print "A blast of anti-matter scatters across the universe making minature black holes everywhere."
+    print "Because of the size and density of the hole these wholes begin to consume the universe."
+    print "One lands in chest of Shadowman."
+    print "The universe fast forwards and he spends millions of years trapped in a frozen state."
+    print "In this state his skin, rapidly, yet slowly tears away from his muscle and after his muscle from his bone. His atoms tear at a molecular level."
+    print "The universe finally comes to a close as it slowly becomes in itself a black hole taking other universes and expanding."
+    print "Soon it beings to tear at the fabric of reality."
+    exit("The worlds ends, with you in it, because of your choice.")
+
+
+def peace():
+    pass
 
 
 def cthulhu():
