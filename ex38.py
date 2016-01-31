@@ -10,7 +10,6 @@ while len(stuff) != 10:
     print "Adding: ", next_one
     stuff.append(next_one)
     print "There are %d items now." % len(stuff)
-
 print "There we go: ", stuff
 
 print "Let's do some things with stuff"
