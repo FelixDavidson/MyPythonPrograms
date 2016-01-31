@@ -43,7 +43,7 @@ print '-' * 10
 hashmap.list(cities)
 
 print '-' * 10
-state = hashmap.get(state, 'Texas')
+state = hashmap.get(states, 'Texas')
 
 if not state:
     print "Sorry, no Texas"

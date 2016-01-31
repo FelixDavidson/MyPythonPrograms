@@ -12,7 +12,7 @@ def hash_key(aMap, key):
 
 def get_bucket(aMap, key):
     """Given a key, find the bucket where it would go."""
-    bucket_id = hask_key(aMap, key)
+    bucket_id = hash_key(aMap, key)
     return aMap[bucket_id]
 
 def get_slot(aMap, key, default=None):
