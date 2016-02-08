@@ -29,7 +29,7 @@ Do you accept or refuse?
 
     elif begin in {"refuse", "No", "no", "n"}:
         print "You say, \"Forgive me brother for I am not up to such a task\""
-        print """He responds, \"Understandable. Farwell and thank you for listening to my tale.\""""
+        print "He responds, \"Understandable. Farwell and thank you for listening to my tale.\""
         print "Again?"
 
         again = raw_input(x)
