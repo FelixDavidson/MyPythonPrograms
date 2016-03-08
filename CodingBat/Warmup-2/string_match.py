@@ -4,7 +4,6 @@ def string_match(a, b):
         if a[i:i+2]  == b[i:i+2]:
             amount += 1
     print amount
-string_match('ab','aabaaba')
 '''
 Old code
 def string_match(a, b):
