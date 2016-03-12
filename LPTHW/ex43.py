@@ -107,7 +107,7 @@ class LaserWeaponArmory(Scene):
             guesses += 1
             guess = raw_input("[keypad]> ")
 
-        if guess = code:
+        if guess == code:
             print "The container clicks open and the seal breaks, letting gas out."
             print "You grab the neutron bomb and run as fast as you can to the"
             print "bridge where you must place it in the right spot."
@@ -177,7 +177,7 @@ class EscapePod(Scene):
             print "implodes as the hull raptures, crushing your body"
             print "into jam jelly."
             return 'death'
-        else
+        else:
             print "You jump into pod %s and hit the eject button." % guess
             print "The pod easily slides out into space heading to"
             print "the planet below.  As it flies to the planet, you look"
