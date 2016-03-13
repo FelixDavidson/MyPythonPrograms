@@ -3,5 +3,4 @@ def date_fashion(you, date):
         return 0
     elif (date >= 8 and you >= 3) or (you >= 8 and date >= 3):
             return 2
-    else:
-        return 1
+    return 1
