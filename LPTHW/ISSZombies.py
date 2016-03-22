@@ -42,19 +42,20 @@ class Death(Scene):
 
 class CabinCorridor(Scene):
     '''A corridor that runs past the cabin rooms and
-    connects to the EscapePod and BrokenEngRoom.'''
+    connects to the EscapePod and TheBridge.'''
     def enter(self):
-        pass
+        print "You open your eyes. You find yourself in a corridor."
+        print ""
 
 class StorageCorridor(Scene):
-    '''A corridor that runs past the StorageRoom,
-    RecRoom, EngineRoom'''
+    '''A corridor that runs past the StorageRoom and
+    EngineRoom'''
     def enter(self):
         pass
 
 class TheBridge(Scene):
-    '''Boss in center of room. Connects to Armory,
-    StorageCorridor, and CabinCorridor'''
+    '''Boss in center of room. Connects to StorageCorridor
+    and CabinCorridor'''
     def enter(self):
         pass
 
@@ -63,8 +64,8 @@ class EscapePod(Scene):
     def enter(self):
         pass
 
-class RecRoom(Scene):
-
+class EngineRoom(Scene):
+    '''A room with an engine'''
     def enter(self):
         pass
 
