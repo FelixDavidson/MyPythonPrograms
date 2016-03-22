@@ -1,18 +1,11 @@
 from sys import exit
 from random import randint
 
-class Item(object):
-
-    def __init__(self, name, damage):
-        self.name = name
-        self.damage = damage
-
 class Scene(object):
 
     def enter(self):
-        pass
+        print "Not really sure what this is for."
         exit(1)
-
 
 class Engine(object):
 
@@ -20,12 +13,32 @@ class Engine(object):
         self.scene_map = scene_map
 
     def play(self):
-        pass
+        current_scene = self.scene_map.opening_scene()
+        last_scene = self.scene_map.next_scene('finished')
+
+        while current_scene != last_scene:
+            next_scene_name = current_scene.enter()
+            current_scene = self.scene_map.next_scene(next_scene_name)
+
+        current_scene.enter()
 
 class Death(Scene):
     '''Should have been caused fairly.'''
+    reasons = [
+        "It seems something you have done has resulted in your death.",
+        "I pray you know that it was your fault you died.",
+        "Ok, that was definitely your fault.",
+        "NO ONE HAS EVER DONE THAT!"
+    ]
+
     def enter(self):
-        pass
+        print Death.reasons[randint(0, len(self.reasons)-1)]
+        print "Wanna try again?"
+        again = raw_input("1. Yes\n2. No\n> ")s
+        if again in ['yes', '1', 'Yes']:
+            a_game.play()
+        else:
+            exit(1)
 
 class CabinCorridor(Scene):
     '''A corridor that runs past the cabin rooms and
@@ -36,11 +49,6 @@ class CabinCorridor(Scene):
 class StorageCorridor(Scene):
     '''A corridor that runs past the StorageRoom,
     RecRoom, EngineRoom'''
-    def enter(self):
-        pass
-
-class Armory(Scene):
-    '''A room that contains weapons and '''
     def enter(self):
         pass
 
@@ -55,22 +63,7 @@ class EscapePod(Scene):
     def enter(self):
         pass
 
-class EngineRoom(Scene):
-    '''Contains hypertransporter,'''
-    def enter(self):
-        pass
-
-class BrokenEngRoom(Scene):
-
-    def enter(self):
-        pass
-
 class RecRoom(Scene):
-
-    def enter(self):
-        pass
-
-class StorageRoom(Scene):
 
     def enter(self):
         pass
