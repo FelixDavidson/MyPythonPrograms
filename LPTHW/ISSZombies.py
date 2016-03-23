@@ -45,7 +45,17 @@ class CabinCorridor(Scene):
     connects to the EscapePod and TheBridge.'''
     def enter(self):
         print "You open your eyes. You find yourself in a corridor."
-        print ""
+        print "Ahead of you, you see it."
+        print "A souless creature. He stares at you with his beady eyes."
+        print "He begins to realize your presence and rushes towards you."
+        print "He starts on all fours gaining tremendous speed with every"
+        print "step."
+        print "You can:\nDodge\nRush him\nStand still"
+
+        action = raw_input("> ")
+
+        if action in ['1', 'Dodge', "dodge"]:
+            
 
 class StorageCorridor(Scene):
     '''A corridor that runs past the StorageRoom and
