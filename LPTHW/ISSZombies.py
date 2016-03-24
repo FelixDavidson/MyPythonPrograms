@@ -55,7 +55,18 @@ class CabinCorridor(Scene):
         action = raw_input("> ")
 
         if action in ['1', 'Dodge', "dodge"]:
-            
+            print "You jump to the left as he lurches towards you."
+            print "With great force he hits the wall behind you smashing his head"
+            print "into a million pieces. You turn back to see his dark blood"
+            print "down the glass. You hear screams from other parts of the ship."
+            print "You know more like him are coming. You duck into the room closest"
+            print "to you."
+            return 'cabin'
+
+class Cabin(Scene):
+    '''A room connecting to the CabinCorridor'''
+    def enter(self):
+        pass
 
 class StorageCorridor(Scene):
     '''A corridor that runs past the StorageRoom and
@@ -78,6 +89,7 @@ class EngineRoom(Scene):
     '''A room with an engine'''
     def enter(self):
         pass
+
 
 class Map(object):
 
