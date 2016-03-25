@@ -1,4 +1,4 @@
-from sys import exit
+from sys import exit # used to exit game
 
 def gold_room():
     print "This room is full of gold.  How much do you take?"
@@ -23,7 +23,7 @@ def bear_room():
     print "How are you going to move the bear?"
     bear_moved = False
 
-    while True:
+    while True: # always run This
         next = raw_input("> ")
 
         if next == "take honey":
@@ -46,19 +46,19 @@ def cthulhu_room():
 
     next = raw_input("> ")
 
-    if "flee" in next:
+    if "flee" in next: # if next is equal to flee then do
         start()
-    elif "head" in next:
+    elif "head" in next: # if next is equal to head then do
         dead("Well that was tasty!")
-    else:
+    else: # if the first two statements are not fufilled then do this
         cthulhu_room()
 
 
-def dead(why):
+def dead(why): # function to exit game after you die
     print why, "Good job!"
     exit(0)
 
-def start():
+def start(): # beginning function, leads to other functions
     print "You are in a dark room."
     print "There is a door to your right and left."
     print "Which one do you take?"
