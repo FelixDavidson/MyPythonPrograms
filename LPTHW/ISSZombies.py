@@ -1,14 +1,15 @@
 from sys import exit
 from random import randint
 
+
 class Scene(object):
 
     def enter(self):
-        print "Not really sure what this is for."
+        print "Not really sure what this is for"
         exit(1)
 
-class Engine(object):
 
+class Engine(object):
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
@@ -22,6 +23,7 @@ class Engine(object):
 
         current_scene.enter()
 
+
 class Death(Scene):
     '''Should have been caused fairly.'''
     reasons = [
@@ -32,13 +34,16 @@ class Death(Scene):
     ]
 
     def enter(self):
-        print Death.reasons[randint(0, len(self.reasons)-1)]
+        print Death.reasons[randint(0, len(self.reasons) - 1)]
         print "Wanna try again?"
         again = raw_input("1. Yes\n2. No\n> ")s
+
         if again in ['yes', '1', 'Yes']:
             a_game.play()
+
         else:
             exit(1)
+
 
 class CabinCorridor(Scene):
     '''A corridor that runs past the cabin rooms and
@@ -56,17 +61,27 @@ class CabinCorridor(Scene):
 
         if action in ['1', 'Dodge', "dodge"]:
             print "You jump to the left as he lurches towards you."
-            print "With great force he hits the wall behind you smashing his head"
-            print "into a million pieces. You turn back to see his dark blood"
-            print "down the glass. You hear screams from other parts of the ship."
-            print "You know more like him are coming. You duck into the room closest"
-            print "to you."
+            print "With great force he hits the wall behind you smashing his"
+            print "head into a million pieces. You turn back to see his dark"
+            print "blood down the glass. You hear screams from other parts of"
+            print "the ship. You know more like him are coming. You duck into"
+            print "the room closest to you."
             return 'cabin'
+
+        elif action in ['2', 'rush', 'Rush', 'Rush him', 'rush him']:
+            pass
+
+        elif action in ['3', 'stand', 'stand still', 'Stand still']:
+            pass
+
+        else:
+            return 'cabcor'
 
 class Cabin(Scene):
     '''A room connecting to the CabinCorridor'''
     def enter(self):
         pass
+
 
 class StorageCorridor(Scene):
     '''A corridor that runs past the StorageRoom and
@@ -74,16 +89,19 @@ class StorageCorridor(Scene):
     def enter(self):
         pass
 
+
 class TheBridge(Scene):
     '''Boss in center of room. Connects to StorageCorridor
     and CabinCorridor'''
     def enter(self):
         pass
 
+
 class EscapePod(Scene):
     '''After getting enough parts and fuel it is used to exit.'''
     def enter(self):
         pass
+
 
 class EngineRoom(Scene):
     '''A room with an engine'''
@@ -101,7 +119,6 @@ class Map(object):
 
     def opening_scene(self):
         pass
-
 
 
 a_map = Map('central_corridor')
