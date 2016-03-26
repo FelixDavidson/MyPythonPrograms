@@ -69,13 +69,26 @@ class CabinCorridor(Scene):
             return 'cabin'
 
         elif action in ['2', 'rush', 'Rush', 'Rush him', 'rush him']:
-            pass
+            print "You drive yourself towards the beast with great speed. To"
+            print "your suprise, he does not let up. He runs faster.He  hits"
+            print "you with tremendous strength. Your breath leaves your body."
+            print "It seems unnatural. He takes you with him as he runs"
+            print "towards the window. He smashes you into it. You hear your"
+            print "bones shatter against the glass as it begins to crack. "
+            print "You think he'd let off after bringing you to death's door,"
+            print "but he is unsatisfied. He begins to thrust his head into"
+            print "the glass behind it. You have already accepted your fate as"
+            print "you hear the glass give and the vacuum of space tear your"
+            print "spine from your near death body."
+            print "Your sight grows dark."
+            return 'death'
 
         elif action in ['3', 'stand', 'stand still', 'Stand still']:
             pass
 
         else:
             return 'cabcor'
+
 
 class Cabin(Scene):
     '''A room connecting to the CabinCorridor'''
