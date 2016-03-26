@@ -84,7 +84,10 @@ class CabinCorridor(Scene):
             return 'death'
 
         elif action in ['3', 'stand', 'stand still', 'Stand still']:
-            pass
+            print "You stand your ground bracing for impact. As he grows near"
+            print "you can tell this was a dumb idea. He hits you like a truck"
+            print "killing you almost instantly"
+            return 'death'
 
         else:
             return 'cabcor'
