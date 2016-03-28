@@ -167,8 +167,9 @@ class EscapePod(Scene):
         print "but you don't have time to look. There's 5 pods, which one"
         print "do you take?"
 
-        good_pod = randint(1, 5)
+        good_pod = randint(1,5)
         guess = raw_input("[pod #]> ")
+
 
         if int(guess) != good_pod:
             print "You jump into pod %s and hit the eject button." % guess
@@ -186,13 +187,11 @@ class EscapePod(Scene):
 
             return 'finished'
 
-
 class Finished(Scene):
 
     def enter(self):
         print "You won! Good job."
         return 'finished'
-
 
 class Map(object):
 
