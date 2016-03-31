@@ -96,7 +96,7 @@ class CabinCorridor(Scene):
 class Cabin(Scene):
     '''A room connecting to the CabinCorridor'''
     def enter(self):
-        pass
+        print "You begin to look around and see two pairs of bunk beds"
 
 
 class StorageCorridor(Scene):
