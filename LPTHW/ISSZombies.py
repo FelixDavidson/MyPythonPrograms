@@ -10,6 +10,7 @@ class Scene(object):
 
 
 class Engine(object):
+
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
@@ -36,14 +37,13 @@ class Death(Scene):
     def enter(self):
         print Death.reasons[randint(0, len(self.reasons) - 1)]
         print "Wanna try again?"
-        again = raw_input("1. Yes\n2. No\n> ")s
+        again = raw_input("1. Yes\n2. No")
 
         if again in ['yes', '1', 'Yes']:
             a_game.play()
 
-        else:
+        elif again in ['no', '2', 'No']:
             exit(1)
-
 
 class CabinCorridor(Scene):
     '''A corridor that runs past the cabin rooms and
@@ -127,14 +127,17 @@ class EngineRoom(Scene):
 
 class Map(object):
 
+    scenes = {}
+
     def __init__(self, start_scene):
         self.start_scene = start_scene
 
     def next_scene(self, scene_name):
-        self.scene_name = scene_name
+        val = Map.scenes.get(scene_name)
+        return val
 
     def opening_scene(self):
-        pass
+        return self.next_scene(self.start_scene)
 
 
 a_map = Map('central_corridor')
