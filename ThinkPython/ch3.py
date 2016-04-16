@@ -30,6 +30,12 @@ def piped():
 def plusminus():
     print '+', '-' * 4, '+', '-' * 4, '+'
 
+def newplusminus():
+    print '+', '-' * 4, '+', '-' * 4, '+', '-' * 4, '+'
+
+def newpiped():
+    print '|',' ' * 4, '|', ' ' * 4, '|', ' ' * 4, '|'
+
 def grid():
     plusminus()
     piped()
@@ -44,3 +50,23 @@ def grid():
     plusminus()
 
 grid()
+
+def newgrid():
+    newplusminus()
+    newpiped()
+    newpiped()
+    newpiped()
+    newpiped()
+    newplusminus()
+    newpiped()
+    newpiped()
+    newpiped()
+    newpiped()
+    newplusminus()
+    newpiped()
+    newpiped()
+    newpiped()
+    newpiped()
+    newplusminus()
+
+newgrid()
