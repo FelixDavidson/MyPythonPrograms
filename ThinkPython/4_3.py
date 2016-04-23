@@ -8,18 +8,17 @@ def square(t, length):
         fd(t, length)
         lt(t)
 
-square(bob, 50)
-def polyline(t, n, length, angle):
+square(bob, 100)
+
+def polygon(t,  n, length):
+    angle = 360.0 / n
     for i in range(n):
         fd(t, length)
-        lt(t, n)
+        lt(t, angle)
 
-def polygon(t, n, length):
-    angle = 360.0/n
-    polyline(t, n, length, angle)
-
-polygon(bob, 100, 50)
+polygon(bob, 5, 50)
 
 def circle(t, r):
-    t = 1
-    r = 2
+    
+
+circle(bob)
