@@ -13,22 +13,32 @@ def square(t, length):
 square(bob, 50)
 
 def polyline(t, n, length, angle):
+    """Draws n line segments with given length and
+    angle (in degrees) between them. t is a turtle.
+    """
     for i in range(n):
         fd(t, length)
         lt(t, angle)
 
 def polygon(t, length, n):
+    """Draws an n sided polygon with given length.
+    t is a turtle.
+    """
     angle = 360.0/n
     polyline(t, n, length, angle)
 
 polygon(bob, 50, 5)
 
 def circle(t, r):
+    """Draws a circle. r is radius. t is turtle.
+    """
     arc(t, r, 360)
 
 #circle(bob, 50)
 
 def arc(t, r, angle):
+    """Draws an arc. r is radius. t is turtle.
+    """
     arc_length = 2 * pi * r * angle / 360
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
