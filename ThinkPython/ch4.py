@@ -29,9 +29,13 @@ def circle(t, r):
 #circle(bob, 50)
 
 def arc(t, r, angle):
-    cir = 2 * pi * r
-    n = int((cir / 3) + 1 * (angle/360.0))
-    length = cir / n
-    polygon(t, length, n)
+    arc_length = 2 * pi * r * angle / 360
+    n = int(arc_length / 3) + 1
+    step_length = arc_length / n
+    step_angle = float(angle) / n
 
-arc(bob, 50, 180)
+    for i in range(n):
+        fd(t, step_length)
+        lt(t, step_angle)
+
+arc(bob, 50, 360)
