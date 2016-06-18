@@ -12,19 +12,19 @@ def square(t, length):
 
 square(bob, 50)
 
-def polygon(t, length, n):
-    angle = 360.0/n
+def polyline(t, n, length, angle):
     for i in range(n):
         fd(t, length)
         lt(t, angle)
 
+def polygon(t, length, n):
+    angle = 360.0/n
+    polyline(t, n, length, angle)
+
 polygon(bob, 50, 5)
 
 def circle(t, r):
-    cir = 2 * pi * r
-    n = int(cir / 3) + 1
-    length = cir / n
-    polygon(t, length, n)
+    arc(t, r, 360)
 
 #circle(bob, 50)
 
@@ -33,9 +33,6 @@ def arc(t, r, angle):
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
     step_angle = float(angle) / n
-
-    for i in range(n):
-        fd(t, step_length)
-        lt(t, step_angle)
+    polyline(t, n, step_length, step_angle)
 
 arc(bob, 50, 360)
