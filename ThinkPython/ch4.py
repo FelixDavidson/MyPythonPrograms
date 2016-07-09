@@ -1,8 +1,8 @@
 from swampy.TurtleWorld import *
 import math
 
-world = TurtleWorld()
-bob = Turtle()
+#world = TurtleWorld()
+#bob = Turtle()
 #bob.delay = 0.1
 
 """
@@ -63,8 +63,8 @@ def arc(t, r, angle):
     r: radius
     angle: Angle
     """
-    arc_length = 2 * math.pi * r * angle / 360
-    n = int(arc_length / 3) + 1
+    arc_length = 2 * math.pi * r * abs(angle) / 360
+    n = int(arc_length / 4) + 1
     step_length = arc_length / n
     step_angle = float(angle) / n
     lt(t, step_angle/2)
@@ -165,12 +165,12 @@ def draw_pie(t, n, r):
     fd(t, r*2 + 10)
     pd(t)
 
-size = 40
-draw_pie(bob, 5, size)
-draw_pie(bob, 6, size)
-draw_pie(bob, 7, size)
-draw_pie(bob, 8, size)
-die(bob)
+#size = 40
+#draw_pie(bob, 5, size)
+#draw_pie(bob, 6, size)
+#draw_pie(bob, 7, size)
+#draw_pie(bob, 8, size)
+#die(bob)
 
-world.canvas.dump()
-wait_for_user()
+#world.canvas.dump()
+#wait_for_user()
