@@ -14,7 +14,7 @@ def draw(t, length, n):
 
 world = TurtleWorld()
 bob = Turtle()
-bob.delay = 1
+bob.delay = 0
 
-draw(bob, 4, 5)
+draw(bob, 4, 10)
 wait_for_user()
